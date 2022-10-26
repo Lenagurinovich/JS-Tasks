@@ -30,9 +30,6 @@ const engineers = {
 for (let property in engineers){
     console.log(`Заработная плата ${property} составляет ${engineers[property]} рублей.`)
 }
-// console.log(`Заработная плата ${} составляет ${engineers.Den} рублей.`)
-// console.log(`Заработная плата Matt составляет ${engineers.Matt} рублей.`)
-// console.log(`Заработная плата Steve составляет ${engineers.Steve} рублей.`)
 
 
 //3. Создать массив из 5 элементов. Используя цикл for, вывести каждый второй элемент массива в консоль.
