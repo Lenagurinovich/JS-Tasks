@@ -27,9 +27,12 @@ const engineers = {
     Matt: 5000,
     Steve: 2000
 }
-console.log(`Заработная плата Den составляет ${engineers.Den} рублей.`)
-console.log(`Заработная плата Matt составляет ${engineers.Matt} рублей.`)
-console.log(`Заработная плата Steve составляет ${engineers.Steve} рублей.`)
+for (let property in engineers){
+    console.log(`Заработная плата ${property} составляет ${engineers[property]} рублей.`)
+}
+// console.log(`Заработная плата ${} составляет ${engineers.Den} рублей.`)
+// console.log(`Заработная плата Matt составляет ${engineers.Matt} рублей.`)
+// console.log(`Заработная плата Steve составляет ${engineers.Steve} рублей.`)
 
 
 //3. Создать массив из 5 элементов. Используя цикл for, вывести каждый второй элемент массива в консоль.
@@ -100,7 +103,7 @@ let numbers6 = [42, 65, 49, 68, 56, 47, 70, 42, 51, 35, 58, 63, 40, 70]
 
 /*1) Вывести в консоль все элементы массива, используя 2 разных цикла: for-of и for со счетчиком*/
 
-for (item of numbers6){
+for (let item of numbers6){
     console.log(item);
 }
 for (let i = 0; i < numbers6.length; i++){
@@ -118,7 +121,7 @@ console.log(sum);
 /*3) Посчитать и вывести в консоль сумму элементов в массиве.*/
 
 let sum2 = 0;
-for(item of numbers6){
+for(let item of numbers6){
     if (item % 2 === 0){
         sum2 += item;
     }
@@ -128,7 +131,7 @@ console.log(sum2);
 /*4) Найти и вывести в консоль максимальное число массива.*/
 
 let max = numbers6[0];
-for (item of numbers6){
+for (let item of numbers6){
     if (max < item){
         max = item;
     } 
@@ -151,7 +154,7 @@ for (let i = 0; i < numbers6.length; i++){
 
 let arr = [5, 4, 3, -3, -10, -1, 8, -20, 0];
 let newArr = [];
-for (item of arr){
+for (let item of arr){
     if (item > 0){
         newArr.push(item);
     }
@@ -164,7 +167,7 @@ console.log(newArr);
 let nums = [5, 4, 3, 8, 0];
 let limit = 5;
 let numsNew = [];
-for (item of nums){
+for (let item of nums){
     if (item >= limit){
         numsNew.push(item);
     }
@@ -179,7 +182,7 @@ const users = [{name: 'Vasya', age: 23}, {name: 'Olya', age: 12}, {name: 'Anna',
 Пройти в цикле по массиву и вывести имена всех пользователей, возраст которых больше 15.*/
 
 const users = [{name: 'Vasya', age: 23}, {name: 'Olya', age: 12}, {name: 'Anna', age: 22}, {name: 'Alex', age: 18}, {name: 'Valery', age: 8}];
-for (item of users){
+for (let item of users){
     if (item.age > 15){
         console.log(item.name);
     }
@@ -200,13 +203,15 @@ let vegetables = ["морковь", "баклажан", "репа", "топин�
 Вывести этот массив в консоль.*/
 
 let vegetablesNew = [];
-for (item of vegetables){
+for (let item of vegetables){
     vegetablesNew.push({word: item, length: item.length});
 }
 console.log(vegetablesNew);
 
 /*2) Пройтись по полученному массиву объектов и вывести в консоль строки вида "слово - длина_слова", например "картошка - 8"*/
 
-for (item of vegetablesNew){
+for (let item of vegetablesNew){
     console.log(item.word + ' - ' + item.length);
+}
+    console.log(false);
 }
