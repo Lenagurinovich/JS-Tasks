@@ -1,7 +1,7 @@
 /*1. Напишите функцию ucFirst(str), возвращающую строку str с заглавным первым символом. Вам понадобятся методы строк.*/
 
 function ucFirst(str){
-    let newStr = str[0].toUpperCase() + str.slice(1, str.length)
+    let newStr = str[0].toUpperCase() + str.slice(1)
     return newStr
 }
 console.log(ucFirst('ggg'));
@@ -12,7 +12,7 @@ console.log(ucFirst('ggg'));
 
 function checkSpam(str){
     let lowerStr = str.toLowerCase()
-    if (lowerStr.includes('badword') === true || lowerStr.includes('xxx') === true){
+    if (lowerStr.includes('badword') || lowerStr.includes('xxx')){
         return true;
     } else{
         return false;
@@ -67,7 +67,7 @@ for (let item of stations){
 let arr = [12, 4, 50, 1, 0, 18, 40];
 
 function checkArray(array){
-    if (array.includes(0) === true){
+    if (array.includes(0)){
         return true
     }
 }
@@ -84,7 +84,7 @@ console.log(unique(strings) ); должен вывести "кришна, хар
 function unique(arr){
     let newArr = [];
     for (let item of arr){
-        if (newArr.includes(item) === false){
+        if (!newArr.includes(item)){
             newArr.push(item);
         }
     }
@@ -149,14 +149,14 @@ verifyCats([4, 5, 3, 11, 6, 2, 4, 1, 5, 9], [2, 4, 5, 1, 13, 2, 15, 8, 3, 7]);
 запуск функции filterFor(arr, 3.11) дает результат [4,5,8]*/
 
 let array = [5, 4, 3, 8, 0];
-let newArray = array.filter((item) => item >= 2);
+let newArray = array.filter(item => item >= 2);
 console.log(newArray)
 
 
 /*9. Описать функцию, которая принимает массив строк и возвращает массив, содержащий только строки более 3-х символов. Проверить работу функции на примере:  ['yes', 'hello', 'no', 'easycode', 'what'].*/
 
 let string =  ['yes', 'hello', 'no', 'easycode', 'what'];
-let filterString = string.filter((item) => item.length > 3);
+let filterString = string.filter(item => item.length > 3);
 console.log(filterString);
 
 
@@ -186,8 +186,8 @@ console.log(newArrayy);
 */
 
 function getAverageHumanAge(catAges){
-    const catHumanAge = catAges.map((item) => item < 2 ? item * 10: item * 7);
-    const filteredCatHumanAge = catHumanAge.filter((item) => item > 17)
+    const catHumanAge = catAges.map(item => item < 2 ? item * 10: item * 7);
+    const filteredCatHumanAge = catHumanAge.filter(item => item > 17)
     return (filteredCatHumanAge.reduce((acc, item) => acc + item) / filteredCatHumanAge.length)
 }
 console.log(getAverageHumanAge([7 , 3, 2, 4, 1, 15, 8, 1, 9, 2]));
