@@ -1,0 +1,27 @@
+.form4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 60px;
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button {
+  margin: 10px;
+  padding: 5px 15px;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+}
