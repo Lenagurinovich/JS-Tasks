@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(../1.jpg);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.photos{
+    width: 70%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #00000072;
+    img{
+        width: 320px;
+        
+    }
+}
+img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
